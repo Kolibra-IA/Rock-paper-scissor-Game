@@ -4,7 +4,7 @@
 
 Rock-paper-scissor game is a basic game built with Javascript, and it involves a user's pick and a computer's pick.
 
-### How it works?
+### How it works:
 
 - The user makes a pick among the three picks: rock, paper, scissors.
 - Simultaneuosly, the computer makes a random pick among the three allowed picks.
