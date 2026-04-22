@@ -32,4 +32,7 @@
 - The user selects just one.
 - Then:
 
-#
+# The computer select a pick:
+
+- The computer select a random pick.
+- The randomization is achieved via the inbuilt Math.random function. DIfferent all the possible outcomes of Math.random() into three categories and match each category to each pick (rock, paper or scissors).
