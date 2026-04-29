@@ -26,13 +26,31 @@
 - The reset button can be clicked to reset the game.
 - The auto-play button can be clicked to auto-play the game.
 
-# The user select a pick:
+# 1. user select a pick:
 
 - The picks are three: rock, paper and scissor.
 - The user selects just one.
 - Then:
 
-# The computer select a pick:
+# 2. The computer select a pick:
 
-- The computer select a random pick.
-- The randomization is achieved via the inbuilt Math.random function. DIfferent all the possible outcomes of Math.random() into three categories and match each category to each pick (rock, paper or scissors).
+- The computer selects a random pick.
+- The randomization is achieved via the inbuilt Math.random function. Orderly classify all the possible outcomes of Math.random() into three categories and match each category to each pick (rock, paper or scissors).
+
+# 3. The two picks (user and computer) are compared:
+
+- Having created a function for the computer's pick (a very logical thing to do), call it within the callback function of the user-pick element selection. Then, store it in a variable.
+
+- Store the user pick in particular in a variable too.
+  ~ Note: I'm not sure if declaring the variables within the callback function (of the user-pick element selection) is BEST or NOT.
+
+- Compare the picks.
+
+# 4. The result(win, loss or tie) is announced based on the rules:
+
+- After each comparison, the result (based on theknown rules) is updated in the result variable.
+- Update the result in the UI.
+
+# 5. The total score is updated:
+
+-
