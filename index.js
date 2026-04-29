@@ -85,7 +85,6 @@ function computerMove() {
   return computerMove;
 }
 
-/*
 // 6. The reset button can be clicked to reset the game:
 
 document.querySelector(".reset").addEventListener("click", function () {
@@ -99,5 +98,3 @@ document.querySelector(".reset").addEventListener("click", function () {
   document.querySelector(".pick-comparison").innerHTML = ``;
   document.querySelector(".result").innerHTML = ``;
 });
-
-*/
