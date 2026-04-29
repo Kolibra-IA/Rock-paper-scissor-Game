@@ -25,6 +25,7 @@
 - The total score is updated.
 - The reset button can be clicked to reset the game.
 - The auto-play button can be clicked to auto-play the game.
+- The score are stored in localStorage, so whenever there's a refresh, it is updated accordingly.
 
 # 1. user select a pick:
 
@@ -67,3 +68,7 @@
 - When the auto-play is clicked, the game should be able to play itself.
 - If the button name is 'Autoplay', when clicked, use setInterval to play the game.
 - If the button name is 'Stop', the clearInterval should be leveraged to stop the game.
+
+# 8. The score is stored in localStorage, so whenever there's a refresh, it is updated accordingly:
+
+- The score is tracked during refresh by leveraging localStorage and JSON.

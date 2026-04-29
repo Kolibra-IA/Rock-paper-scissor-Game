@@ -1,5 +1,12 @@
-let score = { win: 0, loss: 0, tie: 0 };
+let score = JSON.parse(localStorage.getItem("score")) || {
+  win: 0,
+  loss: 0,
+  tie: 0,
+};
 let intervalID;
+
+document.querySelector(".score").innerHTML =
+  `win: ${score.win} loss: ${score.loss} tie: ${score.tie}`;
 
 // 1.  user select a pick:
 document.querySelector(".rock").addEventListener("click", function () {
@@ -69,6 +76,9 @@ function playGame(pick) {
   // 5. The total score is updated: UI:
   document.querySelector(".score").innerHTML =
     `win: ${score.win} loss: ${score.loss} tie: ${score.tie}`;
+
+  // 8. The score are stored in localStorage, so whenever there's a refresh, it is updated accordingly:
+  localStorage.setItem("score", JSON.stringify(score));
 }
 
 //  2. The computer select a pick:
@@ -91,6 +101,9 @@ document.querySelector(".reset").addEventListener("click", function () {
   score.win = 0;
   score.loss = 0;
   score.tie = 0;
+
+  localStorage.removeItem("score");
+
   document.querySelector(".score").innerHTML =
     `win: ${score.win} loss: ${score.loss} tie: ${score.tie}`;
 
@@ -106,7 +119,7 @@ document.querySelector(".autoplay").addEventListener("click", function () {
     document.querySelector(".autoplay").textContent = "Stop";
     intervalID = setInterval(function () {
       playGame(computerMove());
-    }, 5000);
+    }, 500);
   } else if (document.querySelector(".autoplay").textContent === "Stop") {
     document.querySelector(".autoplay").textContent = "Auto-play";
     clearInterval(intervalID);
