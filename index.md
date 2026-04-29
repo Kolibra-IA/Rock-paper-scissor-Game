@@ -53,4 +53,11 @@
 
 # 5. The total score is updated:
 
--
+- The score is stored in an object.
+- As each comparison is done, the score object is updated accordingly.
+- The total score is updated on the UI.
+
+# 6. The reset button can be clicked to reset the game:
+
+- When clicked, the entire score should be reset to 0.
+- The UI should be updated accordingly.
