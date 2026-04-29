@@ -1,4 +1,5 @@
 let score = { win: 0, loss: 0, tie: 0 };
+let intervalID;
 
 // 1.  user select a pick:
 document.querySelector(".rock").addEventListener("click", function () {
@@ -86,7 +87,6 @@ function computerMove() {
 }
 
 // 6. The reset button can be clicked to reset the game:
-
 document.querySelector(".reset").addEventListener("click", function () {
   score.win = 0;
   score.loss = 0;
@@ -97,4 +97,18 @@ document.querySelector(".reset").addEventListener("click", function () {
   document.querySelector(".computer-pick").innerHTML = ``;
   document.querySelector(".pick-comparison").innerHTML = ``;
   document.querySelector(".result").innerHTML = ``;
+});
+
+// 7. The auto-play button can be clicked to auto-play the game:
+
+document.querySelector(".autoplay").addEventListener("click", function () {
+  if (document.querySelector(".autoplay").textContent === "Auto-play") {
+    document.querySelector(".autoplay").textContent = "Stop";
+    intervalID = setInterval(function () {
+      playGame(computerMove());
+    }, 5000);
+  } else if (document.querySelector(".autoplay").textContent === "Stop") {
+    document.querySelector(".autoplay").textContent = "Auto-play";
+    clearInterval(intervalID);
+  }
 });

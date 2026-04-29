@@ -61,3 +61,9 @@
 
 - When clicked, the entire score should be reset to 0.
 - The UI should be updated accordingly.
+
+# 7. The auto-play button can be clicked to auto-play the game:
+
+- When the auto-play is clicked, the game should be able to play itself.
+- If the button name is 'Autoplay', when clicked, use setInterval to play the game.
+- If the button name is 'Stop', the clearInterval should be leveraged to stop the game.
